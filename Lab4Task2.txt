@@ -1,0 +1,34 @@
+23 ?- consult(['c:/Users/inaad/Downloads/Lab04_family_facts.pl']).
+true.
+
+24 ?- female(X).
+X = sara ;
+X = nora.
+
+25 ?- male(X).
+X = ali ;
+X = ahmad ;
+X = muhammad ;
+X = faisal ;
+X = hassan ;
+X = khan.
+
+26 ?- male(_).
+true .
+
+27 ?- parent(X, muhammad), parent(muhammad, faisal).
+X = ali.
+
+28 ?- parent(ahmad, X), female(X).
+X = sara ;
+X = nora.
+
+29 ?- parent(X, ahmad), parent(X, muhammad).
+X = ali.
+
+30 ?- parent(P, khan), parent(P, nora), male(khan).
+P = ahmad.
+
+31 ?-parent(_, khan), parent(_, nora), male(khan).
+true.
+
